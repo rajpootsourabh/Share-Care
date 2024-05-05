@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        .textbook {
+    margin-top: 750px; /* Adjust the top margin as needed */
+    font-family: 'Your Desired Font', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;}
+    
+
+
+
+    
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share & Care</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ce0692ee2e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="header">
+        
+            <!-- Your header content goes here -->
+        
+        <nav>
+            <a href="index.html"><img src="Images/Share&Carelogo3.png" alt=""></a>
+
+            <!-- Login/Signup button at the top-right corner -->
+            <div class="login-signup">
+                <a href="login.php">Login</a>
+            </div>
+
+
+            <div class="nav-link" id="navLink">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    
+                    <li><a href="top_donor.php">TOP DONORS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav> 
+        <div class="textbook">
+            <h1>About Us</h1>
+            <p>
+
+                At the heart of Share and Care is a community driven by compassion and a shared commitment to make the world a better place. We understand that every small act of kindness can create a ripple effect of positive change, and that's why we've created a platform where giving is easy, meaningful, and impactful.
+                </p>
+              <h2>
+                Our Vision:</h2>
+                <p>
+                Share and Care envisions a world where everyone has access to the basic necessities of life. Through our donation app, we aim to empower donors to share what they have with those who need it the most, fostering a culture of compassion and empathy.
+            </p>
+                <h2> How It Works:
+            </h2><p>
+                Our donation app is designed to make the giving process simple and transparent. Whether it's clothing, food, or everyday essentials, you can easily contribute to the well-being of others with just a few clicks. We connect donors with verified organizations and individuals who ensure that your donations reach those who need them promptly.
+            </p><h2>
+                 Why Choose Share and Care:</h2><p>
+                      Direct Impact: Your donations go directly to those in need, creating a tangible and immediate impact on their lives.
+                    </p><h2>
+                Transparency: </h2><p>
+                We prioritize transparency in every step of the donation process. Know exactly where your contribution is going and witness the positive change it brings.
+            </p><h2>
+                Community:
+                </h2><p>
+                Join a community of like-minded individuals who believe in the power of sharing and caring. Together, we can make a significant difference.
+            </p><h2>
+                Get Involved:
+            </h2><p>
+                Ready to make a difference? Download the Share and Care app and become a part of our compassionate community. Whether you're a regular donor or a one-time contributor, your generosity matters.
+            </p>
+            
+            
+            <div class="center-container">
+                <div class="slider-container">
+                    <div class="slides">
+                        <img class="slide-img" src="img/poor1.jpg" alt="Image 1">
+                        <!-- Add more images as needed -->
+                    </div>
+                    <div class="slides">
+                        <img class="slide-img" src="img/poor2.jpg" alt="Image 2">
+                        <!-- Add more images as needed -->
+                    </div>
+                    <div class="slides">
+                        <img class="slide-img" src="img/poor3.jpg" alt="Image 3">
+                        <!-- Add more images as needed -->
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            
+              
+            </div>
+            
+            
+            
+            
+            <h4 style=" font-size: 42px; text-align: center;">
+                Thank you for choosing Share and Care.
+                </h4><h3 > Together, let's create a world where kindness knows no bounds.
+            </h3>
+            <h3>  Share and Care - Because Every Act of Kindness Counts.
+
+            </h3>
+           
+            
+        </div>
+
+        
+    </section>
+    <!-------course------>
+
+    <!-- ----------JavaScript for Toggle Menu---------- -->
+    <script>
+        var navLink = document.getElementById("navLink");
+
+        function showMenu() {
+            navLink.style.right = "0";
+        }
+        function hideMenu() {
+            navLink.style.right = "-200px";
+
+        }
+
+
+
+            
+    let slideIndex = 0;
+    const slides = document.querySelector('.slides');
+    const slideImages = document.querySelectorAll('.slide-img');
+
+    function showSlides() {
+        slideIndex++;
+        if (slideIndex >= slideImages.length) {
+            slideIndex = 0;
+        }
+
+        for (let i = 0; i < slideImages.length; i++) {
+            slideImages[i].style.display = "none";
+        }
+
+        slideImages[slideIndex].style.display = "block";
+
+        setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    }
+
+    function plusSlides(n) {
+        slideIndex += n;
+        if (slideIndex < 0) {
+            slideIndex = slideImages.length - 1;
+        } else if (slideIndex >= slideImages.length) {
+            slideIndex = 0;
+        }
+
+        for (let i = 0; i < slideImages.length; i++) {
+            slideImages[i].style.display = "none";
+        }
+
+        slideImages[slideIndex].style.display = "block";
+    }
+
+    showSlides();  slides[slideIndex - 1].style.display = "block";
+    </script>
+
+</body>
+
+</html>
